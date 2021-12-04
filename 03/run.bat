@@ -1,2 +1,2 @@
 @echo off
-javac -Xlint:all Main.java && java -ea Main
+javac Main.java && java Main

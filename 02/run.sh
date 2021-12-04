@@ -1,2 +1,2 @@
 #!/bin/sh
-javac Main.java && java Main
+javac -Xlint:all Main.java && java Main
