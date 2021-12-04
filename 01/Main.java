@@ -40,7 +40,7 @@ public class Main {
 		prev2[1] = Integer.parseInt(line);
 
 		line = r.readLine();
-		for(int i = 0; line != null; line = r.readLine(), i++) {
+		for(;line != null; line = r.readLine()) {
 			int depth = Integer.parseInt(line);
 			int sum = prev2[0] + prev2[1] + depth;
 
