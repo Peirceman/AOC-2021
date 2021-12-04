@@ -3,15 +3,16 @@ import java.nio.file.Paths;
 import java.io.File;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 	private static File file = new File("input.txt");
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 		part1();
 		part2();
 	}
 
-	private static void part1() throws Exception {
+	private static void part1() throws IOException {
 		BufferedReader r = new BufferedReader(new FileReader(file));
 		int increases = 0, prevDepth = -1;
 		for(String line = r.readLine(); line != null; line = r.readLine()) {
@@ -29,7 +30,7 @@ public class Main {
 		System.out.printf("Part 1: %d%n", increases);
 	}
 
-	private static void part2() throws Exception {
+	private static void part2() throws IOException {
 		BufferedReader r = new BufferedReader(new FileReader(file));
 		int increases = 0, prevSum = -1;
 		final int[] prev2 = new int[2];
