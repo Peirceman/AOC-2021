@@ -1,0 +1,3 @@
+I couldn't get it working I used someone elses solution to solve it
+https://github.com/simonbrahan/aoc2021/. It feels like I had to use
+an external pathfinding library but that feels like cheating.

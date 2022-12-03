@@ -18,14 +18,17 @@ public class Main {
 
 		AtomicInteger tmpMin = new AtomicInteger(Integer.MAX_VALUE), tmpMax = new AtomicInteger(Integer.MIN_VALUE);
 		int[] positions = Arrays.stream(r.readLine().split(","))
-			.mapToInt(Integer::parseInt)
-			.peek(x -> {tmpMin.set(Math.min(tmpMin.get(), x)); tmpMax.set(Math.max(tmpMax.get(), x));})
-			.toArray();
+				.mapToInt(Integer::parseInt)
+				.peek(x -> {
+					tmpMin.set(Math.min(tmpMin.get(), x));
+					tmpMax.set(Math.max(tmpMax.get(), x));
+				})
+				.toArray();
 		int min = tmpMin.get();
 		int max = tmpMax.get();
 
 		int minCost = Integer.MAX_VALUE;
-		
+
 		for (int i = min; i <= max; i++) {
 			int cost = 0;
 
@@ -44,15 +47,17 @@ public class Main {
 
 	/**
 	 * calculates the sum from 1 to {@code a}
+	 * 
 	 * @param a the number to calculate the sum to
 	 * @return the sum from 1 to {@code a}
 	 */
 	private static int sum(int a) {
-		if (a < 1) return a;
+		if (a < 1)
+			return a;
 
 		if (a % 2 == 0)
 			return (a + 1) * (a / 2);
-		return a * (a >> 1) + a;
+		return a * (a / 2) + a;
 	}
 
 	private static void part2() throws IOException {
@@ -60,14 +65,17 @@ public class Main {
 
 		AtomicInteger tmpMin = new AtomicInteger(Integer.MAX_VALUE), tmpMax = new AtomicInteger(Integer.MIN_VALUE);
 		int[] positions = Arrays.stream(r.readLine().split(","))
-			.mapToInt(Integer::parseInt)
-			.peek(x -> {tmpMin.set(Math.min(tmpMin.get(), x)); tmpMax.set(Math.max(tmpMax.get(), x));})
-			.toArray();
+				.mapToInt(Integer::parseInt)
+				.peek(x -> {
+					tmpMin.set(Math.min(tmpMin.get(), x));
+					tmpMax.set(Math.max(tmpMax.get(), x));
+				})
+				.toArray();
 		int min = tmpMin.get();
 		int max = tmpMax.get();
 
 		int minCost = Integer.MAX_VALUE;
-		
+
 		for (int i = min; i <= max; i++) {
 			int cost = 0;
 
